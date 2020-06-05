@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Node.jsインストール</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="nodejsインストール">Node.jsインストール</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li><a href="#nodejs%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Node.jsインストール</a>
+<ul>
+<li><a href="#%E6%A6%82%E8%A6%81">概要</a></li>
+<li><a href="#nodejs%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">Node.jsダウンロード</a></li>
+<li><a href="#nodejs%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B">Node.jsをインストールする</a>
+<ul>
+<li><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%82%92%E8%B5%B7%E5%8B%95">インストーラを起動</a></li>
+<li><a href="#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E5%90%8C%E6%84%8F">ライセンス同意</a></li>
+<li><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%8C%87%E5%AE%9A">インストールフォルダ指定</a></li>
+<li><a href="#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E9%81%B8%E6%8A%9E">モジュール選択</a></li>
+<li><a href="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E8%BF%BD%E5%8A%A0%E6%8C%87%E5%AE%9A">オプション追加指定</a></li>
+<li><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%8C%87%E7%A4%BA">インストール指示</a></li>
+<li><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%AE%8C%E4%BA%86">インストール完了</a></li>
+</ul>
+</li>
+<li><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%AE%8C%E4%BA%86%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B">インストール完了を確認する</a></li>
+</ul>
+</li>
+<li><a href="#yarn%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B">yarnをインストールする</a></li>
+</ul>
+<h2 id="nodejsダウンロード">Node.jsダウンロード</h2>
+<p>Node.jsのHP（以下のURL）よりインストーラーをダウンロードする。</p>
+<p>ダウンロード済みファイル：　50_ETC\soft\node-v12.17.0-x64.msi</p>
+<pre><code><code><div>https://nodejs.org/ja/download/
+</div></code></code></pre>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\10_WEBAPP\images\img01.png" alt=""></p>
+<h2 id="nodejsをインストールする">Node.jsをインストールする</h2>
+<h3 id="インストーラを起動">インストーラを起動</h3>
+<p>インストーラを起動し、<strong>「Next」</strong> ボタンをクリックします。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\10_WEBAPP\images\img02.png" alt=""></p>
+<h3 id="ライセンス同意">ライセンス同意</h3>
+<p>ライセンス同意にチェックを入れ、<strong>「Next」</strong> ボタンをクリックします。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\10_WEBAPP\images\img03.png" alt=""></p>
+<h3 id="インストールフォルダ指定">インストールフォルダ指定</h3>
+<p>インストールするフォルダを指定し、<strong>「Next」</strong> ボタンをクリックします。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\10_WEBAPP\images\img04.png" alt=""></p>
+<h3 id="モジュール選択">モジュール選択</h3>
+<p>インストールするモジュールを選択し、<strong>「Next」</strong> ボタンをクリックします。</p>
+<p>デフォルトのままで良いでしょう。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\10_WEBAPP\images\img05.png" alt=""></p>
+<h3 id="オプション追加指定">オプション追加指定</h3>
+<p>Nativeモジュール追加は、今は必要ないのでチェックせずに、<strong>「Next」</strong> ボタンをクリックします。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\10_WEBAPP\images\img06.png" alt=""></p>
+<h3 id="インストール指示">インストール指示</h3>
+<p><strong>「Install」</strong> ボタンをクリックし、インストール開始します。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\10_WEBAPP\images\img07.png" alt=""></p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\10_WEBAPP\images\img08.png" alt=""></p>
+<h3 id="インストール完了">インストール完了</h3>
+<p>インストールが完了しました。<strong>「Finish」</strong> ボタンをクリックして終了します。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\10_WEBAPP\images\img09.png" alt=""></p>
+<h2 id="インストール完了を確認する">インストール完了を確認する</h2>
+<p>CMDを起動し、下記コマンドでインストール完了を確認する</p>
+<pre><code><code><div>CMD&gt; node --version
+v12.16.1
+
+CMD&gt;
+</div></code></code></pre>
+<hr>
+<h1 id="yarnをインストールする">yarnをインストールする</h1>
+<p>引き続きコマンドラインで以下のコマンドを実行し、yarnをインストールします。</p>
+<pre><code><code><div>CMD&gt; npm i -g yarn
+C:\Users\katouhis\AppData\Roaming\npm\yarn -&gt; C:\Users\katouhis\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+C:\Users\katouhis\AppData\Roaming\npm\yarnpkg -&gt; C:\Users\katouhis\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
++ yarn@1.22.4
+:
+
+CMD&gt;
+</div></code></code></pre>
+
+    </body>
+    </html>

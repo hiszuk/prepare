@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MariaDB(MySQL互換DB)インストール</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="mariadbmysql互換dbインストール">MariaDB(MySQL互換DB)インストール</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li><a href="#mariadbmysql%E4%BA%92%E6%8F%9Bdb%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">MariaDB(MySQL互換DB)インストール</a>
+<ul>
+<li><a href="#%E6%A6%82%E8%A6%81">概要</a></li>
+<li><a href="#%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</a></li>
+<li><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</a></li>
+<li><a href="#%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D">動作確認</a>
+<ul>
+<li><a href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E8%B5%B7%E5%8B%95%E7%8A%B6%E6%B3%81%E3%81%AE%E7%A2%BA%E8%AA%8D">サービス起動状況の確認</a></li>
+<li><a href="#db%E6%83%85%E5%A0%B1%E3%82%92%E7%A2%BA%E8%AA%8D">DB情報を確認</a></li>
+</ul>
+</li>
+<li><a href="#sampledb%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9sample%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E4%BD%9C%E6%88%90">sampledbデータベース・sampleユーザー作成</a>
+<ul>
+<li><a href="#sampledb%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E4%BD%9C%E6%88%90">sampledbデータベース作成</a></li>
+<li><a href="#sample%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E4%BD%9C%E6%88%90">sampleユーザー作成</a></li>
+<li><a href="#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E4%BD%9C%E6%88%90">サンプルテーブル作成</a></li>
+</ul>
+</li>
+<li><a href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E8%B5%B7%E5%8B%95%E8%A8%AD%E5%AE%9A%E5%A4%89%E6%9B%B4">サービス起動設定変更</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="ダウンロード">ダウンロード</h2>
+<p>下記URLよりMariaDBをダウンロードする。</p>
+<p>本家MySQLはOracleのアカウント登録が必要でオプションも豊富なため、今回の「必要最小限のDB」という目的には合わないため互換DBでインストール・設定が比較的容易なMariaDBをインストールする。</p>
+<p>ダウンロード済ファイル：50_ETC\soft\mariadb-10.4.13-winx64.msi</p>
+<pre><code><code><div>https://mariadb.org/
+</div></code></code></pre>
+<p><strong>「Dwonload」</strong> ボタンをクリックする</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql01.png" alt=""></p>
+<p><strong>「Download MariaDB Server」</strong> をクリックする</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql02.png" alt=""></p>
+<p><strong>「Download 10.4.13 Stable Now!」</strong> をクリックする</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql03.png" alt=""></p>
+<p><strong>「Windows x86_64 MSI package」</strong> を選択する</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql04.png" alt=""></p>
+<h2 id="インストール">インストール</h2>
+<p>mariadb-10.4.13-winx64.msi をダブルクリックしてインストーラーを起動し、<br/>
+<strong>「Next」</strong> ボタンをクリックします。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql05.png" alt=""></p>
+<p>ライセンス同意をチェックして <strong>「Next」</strong> ボタンをクリックします。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql06.png" alt=""></p>
+<p>インストールモジュールを選択して、<strong>「Next」</strong> ボタンをクリックします。<br/>
+最小構成とするために、Backup utilities, Development Componets, Third party tools はインストールしません。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql07.png" alt=""></p>
+<p><strong>「Modify password for database user 'root'」</strong> のチェックを外し、<br/>
+<strong>「Use UTF8 as default server's character set」</strong> にチェックを入れて、<br/>
+<strong>「Next」</strong> ボタンをクリックします。</p>
+<p>rootにパスワード設定をしたい場合は、Modify...にチェックを入れてパスワード設定します。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql08.png" alt=""></p>
+<p><strong>「Buffer pool size」</strong> を500MBに変更して、あとはデフォルトのままとし、<br/>
+<strong>「Next」</strong> ボタンをクリックします。</p>
+<p>他に <strong>3306番</strong> ポートを利用するサービスがある場合はポート番号を変更します。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql09.png" alt=""></p>
+<p><strong>「Next」</strong> ボタンをクリックします。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql10.png" alt=""></p>
+<p><strong>「Install」</strong> ボタンをクリックします。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql11.png" alt=""></p>
+<p>管理者として実行することを確認する画面になるので、「はい」を選びます。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql12.png" alt=""></p>
+<p>最後に <strong>「Finish」</strong> ボタンをクリックして終了します。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\mysql13.png" alt=""></p>
+<h2 id="動作確認">動作確認</h2>
+<h3 id="サービス起動状況の確認">サービス起動状況の確認</h3>
+<p>コマンドプロンプトから <strong>scコマンド</strong> でサービス起動状況を確認します。</p>
+<p><strong>「コントロールパネル」</strong> の <strong>「サービス」</strong> から確認しも良いです。</p>
+<pre><code><code><div>CMD&gt; sc query MariaDB
+
+SERVICE_NAME: MariaDB
+        TYPE               : 10  WIN32_OWN_PROCESS
+        STATE              : 4  RUNNING
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+</div></code></code></pre>
+<h3 id="db情報を確認">DB情報を確認</h3>
+<p><strong>databases</strong> コマンドでDB情報を確認します。</p>
+<p>コマンドプロンプトから <strong>mysqlクライアント</strong> を起動して確認します。</p>
+<pre><code><code><div>CMD&gt; &quot;C:\Program Files\MariaDB 10.4\bin\mysql.exe&quot; -uroot -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 9
+Server version: 10.4.13-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+4 rows in set (0.004 sec)
+</div></code></code></pre>
+<h2 id="sampledbデータベースsampleユーザー作成">sampledbデータベース・sampleユーザー作成</h2>
+<p>そのままSQLコマンドラインにて、下記を実行する。</p>
+<h3 id="sampledbデータベース作成">sampledbデータベース作成</h3>
+<pre><code><code><div>MariaDB [(none)]&gt; create database sampledb character set utf8;
+Query OK, 1 row affected (0.002 sec)
+</div></code></code></pre>
+<h3 id="sampleユーザー作成">sampleユーザー作成</h3>
+<pre><code><code><div>MariaDB [(none)]&gt; grant all on sampledb.* to 'sample'@'localhost' identified by 'sample';
+Query OK, 0 rows affected (0.135 sec)
+
+MariaDB [(none)]&gt; flush privileges;
+Query OK, 0 rows affected (0.126 sec)
+
+MariaDB [(none)]&gt; quit
+Bye
+</div></code></code></pre>
+<h3 id="サンプルテーブル作成">サンプルテーブル作成</h3>
+<p>sampleユーザーでmysqlを起動する</p>
+<pre><code><code><div>CMD&gt; &quot;C:\Program Files\MariaDB 10.4\bin\mysql.exe&quot; -usample -psample sampledb
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 9
+Server version: 10.4.13-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [sampledb]&gt;
+</div></code></code></pre>
+<p>table作成と初期データ登録</p>
+<pre><code><code><div>MariaDB [sampledb]&gt; source 10_create_tableSJ.sql
+Query OK, 0 rows affected (0.776 sec)
+
+Query OK, 7 rows affected (0.070 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+</div></code></code></pre>
+<p>登録データの確認</p>
+<pre><code><code><div>MariaDB [sampledb]&gt; select id,title from items;
++----+------------------------------------------+
+| id | title                                    |
++----+------------------------------------------+
+|  1 | WEB Application作成                      |
+|  2 | RESTful API作成                          |
+|  3 | フロントエンドとバックエンドを結合       |
+|  4 | MySQLのDockerイメージを作成する          |
+|  5 | バックエンドのDockerイメージを作成する   |
+|  6 | フロントエンドのDockerイメージを作成する |
+|  7 | Docker-composeでパッケージ化する         |
++----+------------------------------------------+
+7 rows in set (0.001 sec)
+
+MariaDB [sampledb]&gt; quit
+Bye
+
+</div></code></code></pre>
+<h2 id="サービス起動設定変更">サービス起動設定変更</h2>
+<p>初期状態ではサービス自動起動となっているため、必要時に手動起動するように起動方法を変更する。</p>
+<p>スタート＞Windows管理ツール＞サービスを選択する。</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\svc01.png" alt=""></p>
+<p>MariaDBをダブルクリックで開く</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\svc02.png" alt=""></p>
+<p><strong>「スタートアップの種類」</strong> を <strong>「自動」</strong> から <strong>「手動」</strong> に変更する</p>
+<p><img src="file:///c:\home\勉強会\01_PREPARE\20_RESTAPI\images\svc03.png" alt=""></p>
+
+    </body>
+    </html>
