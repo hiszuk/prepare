@@ -66,45 +66,45 @@
 <h3 id="公式サイトからダウンロード">公式サイトからダウンロード</h3>
 <p>公式サイト　↓　からインストーラをダウンロードします。<br/>
 <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows/">https://hub.docker.com/editions/community/docker-ce-desktop-windows/</a></p>
-<p><img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker01.png" alt=""></p>
+<p><img src="./images/docker01.png" alt=""></p>
 <p>ダウンロード済みファイル：50_ETC\soft\Docker Desktop Installer.exe</p>
 <h2 id="環境確認">環境確認</h2>
 <h3 id="biosレベルで仮想化設定されているか確認">BIOSレベルで仮想化設定されているか確認</h3>
 <p>タスクマネージャ＞パフォーマンス　のタブを開き、右下部分の <strong>「仮想化」</strong> が有効になっているか確認します。<br/>
 有効になっていない場合は、<a href="#bios%E8%A8%AD%E5%AE%9A">BIOSの設定</a>が必要です。<br/>
 有効になっている場合は、<a href="#hyper-v%E3%81%A8container%E3%81%AE%E6%9C%89%E5%8A%B9%E5%8C%96">Hyper-Vとcontainerの有効化</a> に進んでください。</p>
-<p><img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker02.png" alt=""></p>
+<p><img src="./images/docker02.png" alt=""></p>
 <h2 id="環境設定">環境設定</h2>
 <p>Dockerを利用する環境を設定します。</p>
 <h3 id="bios設定">BIOS設定</h3>
 <p>Windowsを再起動し、再起動中にPCのメーカーのロゴが表示されるかと思いますが、それが表示されている間にBIOS画面に入ります。メーカーによって入り方は異なりますが、「F1」、「F2」、「Del」などのキーを押すことでBIOS画面に入れますが、入れない場合は「メーカー名 bios　入り方」などで調べてみてください。</p>
 <p>BIOS画面はメーカーによって異なりますが、Virtualizationのメニューを探します。</p>
-<p><img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker03.jpg" alt=""></p>
+<p><img src="./images/docker03.jpg" alt=""></p>
 <p>Intel Virtualization Technologyを「Enabled」に変更して「F10」で保存します。</p>
-<p><img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker04.jpg" alt=""></p>
+<p><img src="./images/docker04.jpg" alt=""></p>
 <h3 id="hyper-vとcontainerの有効化">Hyper-Vとcontainerの有効化</h3>
 <p>Hyper-VとContainerの有効化を行います。</p>
 <p>Windowsメニューから <strong>「設定」</strong> を開いて、 <strong>「アプリ」</strong> を選択します。<br/>
-<img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker05.png" alt=""></p>
+<img src="./images/docker05.png" alt=""></p>
 <p>下にスクロールして <strong>「関連設定＞プログラムと編集」</strong> を選択します。<br/>
-<img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker06.png" alt=""></p>
+<img src="./images/docker06.png" alt=""></p>
 <p><strong>「Windowsの機能の有効化または無効化」</strong> を選択します。<br/>
-<img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker06-1.png" alt=""></p>
+<img src="./images/docker06-1.png" alt=""></p>
 <p>この画面が表示されるので <strong>「Hyper-V」</strong> と <strong>「Container」</strong> にチェックを入れて「OK」をクリックします。<br/>
-<img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker07.png" alt=""></p>
+<img src="./images/docker07.png" alt=""></p>
 <h2 id="インストール">インストール</h2>
 <p>Docker Desktop Installer.exe をダブルクリックするとインストールが始まります。<br/>
-<img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker09.png" alt=""></p>
+<img src="./images/docker09.png" alt=""></p>
 <p><strong>「Close」</strong> ボタンをクリックしてインストールを完了します。<br/>
-<img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker10.png" alt=""></p>
+<img src="./images/docker10.png" alt=""></p>
 <h2 id="起動確認">起動確認</h2>
 <p>デスクトップに作成された <strong>「Docker Desktop」</strong> アイコンを選択し、右ボタン押下で <strong>「管理者として実行」</strong> を選択します。</p>
 <p>インジケーターにアイコンが表示され、アニメーションが終われば起動完了です。<br/>
-<img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker11.png" alt=""></p>
+<img src="./images/docker11.png" alt=""></p>
 <p>アイコンを右クリックしメニュー表示し <strong>「Setting」</strong> を選択し設定画面を開きます。<br>
-<img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker11-1.png" alt=""></p>
+<img src="./images/docker11-1.png" alt=""></p>
 <p>Dockerはメモリを大量に消費するので、普段は起動しないように <strong>「Start ...」</strong> のチェックは外しておきます。</br>
-<img src="file:///c:\home\勉強会\01_PREPARE\30_DOCKER\images\docker12.png" alt=""></p>
+<img src="./images/docker12.png" alt=""></p>
 
     </body>
     </html>
