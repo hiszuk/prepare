@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JDKインストールと設定</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="jdkインストールと設定">JDKインストールと設定</h1>
+<ul>
+<li><a href="#jdk%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A">JDKインストールと設定</a>
+<ul>
+<li><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%89%8D%E3%81%AE%E7%A2%BA%E8%AA%8D">インストール前の確認</a></li>
+<li><a href="#jdk%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">JDKダウンロード</a></li>
+<li><a href="#jdk%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">JDKインストール</a></li>
+<li><a href="#%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E8%A8%AD%E5%AE%9A">環境変数設定</a>
+<ul>
+<li><a href="#path-%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B">Path 環境変数を設定する</a></li>
+<li><a href="#java_home-%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B">JAVA_HOME 環境変数を設定する</a></li>
+</ul>
+</li>
+<li><a href="#vscode%E3%81%AE%E8%A8%AD%E5%AE%9A">VSCODEの設定</a>
+<ul>
+<li><a href="#javahome%E3%82%92%E8%A8%AD%E5%AE%9A">java.homeを設定</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="インストール前の確認">インストール前の確認</h2>
+<p>コマンドプロンプトを起動して次のコマンドを入力する。</p>
+<pre><code class="language-cmd"><div><span class="hljs-built_in">CMD</span>&gt; javac -version
+
+javac <span class="hljs-number">1</span>.<span class="hljs-number">8</span>.<span class="hljs-number">0</span>_144
+</div></code></pre>
+<p>バージョンの応答があれば、JDKはインストール済みなので、<a href="#VSCODE%E3%81%AE%E8%A8%AD%E5%AE%9A">VSCODEの設定</a>に進みます。</p>
+<p>エラーが出た場合はインストールが必要なので、ダウンロード・インストール～設定を実施する。</p>
+<h2 id="jdkダウンロード">JDKダウンロード</h2>
+<p><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">Java SE Development Kit 8 Downloads</a>にてJava SE Development Kit 8u251のWindows x64	版をダウンロードします。<br/>
+ソフトはやはり最新の！という方は、<a href="https://www.oracle.com/java/technologies/javase-downloads.html">こちら</a> でJava SE 14をダウンロードしていただいても構いません。</p>
+<p>ダウンロード済みのインストーラはこちら <a href="https://dilsrv.sharepoint.com/:u:/s/2376/Efu5TujQGg1PjgaN4NUiRHwBvMar6WFMzWOpBsbDDJGiKg?e=F5hrR1">&lt; インストーラダウンロード &gt;</a></p>
+<h2 id="jdkインストール">JDKインストール</h2>
+<p>ダウンロードしたファイルを任意の場所で実行すると、インストールが開始される。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_01.jpg" alt=""></p>
+<p>最初にセットアップ画面が表示されるので[次]ボタンをクリックする。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_02.jpg" alt=""></p>
+<p>インストールオプションを設定する。特に変更する必要もないので[次]ボタンをクリックする。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_03.jpg" alt=""></p>
+<p>コピー先インストール先のフォルダを確認される。特に変更する必要もないが、変更する場合は「変更(C)」ボタンから変更して、 [次]ボタンをクリックする。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_04.jpg" alt=""></p>
+<p>インストールが実行される。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_05.jpg" alt=""></p>
+<p>この画面が出るとインストールが完了です。</p>
+<h2 id="環境変数設定">環境変数設定</h2>
+<h3 id="path-環境変数を設定する">Path 環境変数を設定する</h3>
+<p>[スタートメニュー]→[Windowsシステムツール]→[コントロールパネル]→[システム]→[システムの詳細設定]</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_06.jpg" alt=""></p>
+<p>「詳細設定」のタブを押し、最下部にある「環境変数」のボタンをクリックする。設定されている環境変数の一覧が表示される。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_07.jpg" alt=""></p>
+<p>まずシステム環境変数「Path」の設定を行う。システム環境変数のリストにある「Path」の行をクリックしてから下の「編集」ボタンをクリックする。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_08.jpg" alt=""></p>
+<p>環境変数「Path」に設定されている項目が多数出てくるので、ここに新たに1項目を追加する。右上の「新規」ボタンをクリックして<strong>JDKをインストールしたパスに</strong>「bin」フォルダまでを加えたパスを入力する。</p>
+<p>例えば、次のような入力になる。</p>
+<pre><code><code><div>C:\Program Files\Java\jdk1.8.0_144\bin
+</div></code></code></pre>
+<p>注意：導入した時期、JDKのバージョンアップによって 1.8.0の後の3桁の数字は変わるので、設定前に念の為確認しておくこと</p>
+<h3 id="java_home-環境変数を設定する">JAVA_HOME 環境変数を設定する</h3>
+<p>続いて環境変数「JAVA_HOME」の設定を行う。システム環境変数の欄にJAVA_HOMEがない場合は「新規」ボタンをクリックする。既にある場合は、値が正しいかどうかの確認だけで良い。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_09.jpg" alt=""></p>
+<p>変数名は大文字で「JAVA_HOME」、変数値にはJDKをインストールしたフォルダパスを入力して「OK」をクリックする。こちらはPathの設定と違い、末尾の「￥bin」は不要となる。</p>
+<p>これでJDKの準備は整ったが、念のため正しく登録されたかどうかを確認しておく。</p>
+<p>コマンドプロンプトを開き、先ほど紹介した方法で確認を行う。</p>
+<pre><code class="language-cmd"><div><span class="hljs-built_in">CMD</span>&gt; java -version
+</div></code></pre>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_10.jpg" alt=""></p>
+<p>このようにJavaのバージョンが表示されていればインストールは完了です。</p>
+<h2 id="vscodeの設定">VSCODEの設定</h2>
+<h3 id="javahomeを設定">java.homeを設定</h3>
+<p>VSCODEサイドメニューの一番下にある歯車アイコンから設定を開く。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_11.png" alt=""></p>
+<p>設定画面上部の検索窓に　<strong>java.home</strong> と入力すると設定項目が表示されるので、 <strong>setting.jsonで編集</strong> をクリックする。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_12.png" alt=""></p>
+<p>setting.json 設定編集画面が表示されるので、<strong>java.home</strong> の設定を追加する。</p>
+<p><img src="https://hiszuk.github.io/prepare/20_RESTAPI/images/jdk_13.png" alt=""></p>
+<p>例えば、次のような内容を既存ファイルに追記する。</p>
+<pre><code class="language-json"><div>    <span class="hljs-string">"java.home"</span>: <span class="hljs-string">"C:\\Program Files\\Java\\jdk1.8.0_144"</span>
+</div></code></pre>
+
+    </body>
+    </html>
